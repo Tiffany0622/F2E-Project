@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     getData() {
-      getTourismData.then((res) => {
+      getTourismData().then((res) => {
         this.dataList = res
         console.log('HI', this.dataList)
       })
