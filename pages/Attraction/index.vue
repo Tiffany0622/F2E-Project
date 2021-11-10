@@ -1,13 +1,11 @@
-<template></template>
+<template>
+  
+</template>
 
 <script>
 import { getTourismData } from '@/api/getTourismData'
 
 export default {
-  components: {},
-  middleware({ store, redirect }) {
-    redirect('/Attraction')
-  },
   data: () => ({
     dataList: [],
   }),
@@ -24,3 +22,7 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
