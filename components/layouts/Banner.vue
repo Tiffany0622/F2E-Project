@@ -17,43 +17,48 @@
         <img class="img_02" src="~/static/icon/bannerText_i_02.png" alt="" />
       </div>
     </div>
-    <!-- 卡片陰影 -->
-    <!-- <div class=" vector vector_left"></div>
-    <div class=" vector vector_right"></div> -->
+    <div class="subText">
+      <p>台北、台中、台南、屏東、宜蘭……遊遍台灣</p>
+    </div>
+    <Searchbar class="Searchbar"></Searchbar>
   </div>
 </template>
 
 <script>
+import Searchbar from "@/components/layouts/Searchbar";
+
 export default {
+  components: { Searchbar },
   computed: {},
   data() {
     return {
       bannerImages: [
         {
-          name: 'summer',
-          path: '',
+          name: "summer",
+          path: "",
           id: 1,
-          image: require('static/images/banner01.png'),
+          image: require("static/images/banner01.png"),
         },
         {
-          name: 'autumn',
-          path: '',
+          name: "autumn",
+          path: "",
           id: 2,
-          image: require('static/images/banner02.png'),
+          image: require("static/images/banner02.png"),
         },
       ],
-    }
+    };
   },
   methods: {
     // getStyle(url) {
     //   return `background-image: url(${this.imageUrl ? this.imageUrl : ''});`
     // },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .bannerImages {
+  position: relative;
   max-width: 1226px;
   height: 490px;
   overflow: hidden;
@@ -65,7 +70,7 @@ export default {
   width: 486px;
   display: flex;
   position: absolute;
-  left: 440px;
+  left: 394px;
   top: 287px;
 
   .text_welcome {
@@ -119,29 +124,23 @@ export default {
   color: #ffffff;
   text-shadow: 0px 4px 3px rgba(13, 11, 12, 0.2);
 }
-.vector{
-/* black */
 
-background: #0D0B0C;
-opacity: 0.3;
-/* shadow_blur */
-
-filter: blur(11px);
-}
-.vector_right{
+.subText {
   position: absolute;
-width: 679.73px;
-height: 52px;
-left: 606.27px;
-top: 544px;
-z-index: -10;
+  left: 394px;
+  top: 366px;
+  font-family: Noto Sans TC;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height, or 150% */
+
+  /* white */
+
+  color: #ffffff;
 }
-.vector_left{
-position: absolute;
-width: 679.73px;
-height: 52px;
-left: 81px;
-top: 544px;
-z-index: -10;
+.Searchbar {
+  position: absolute;
+  left: 394px;
+  top: 396px;
 }
 </style>
