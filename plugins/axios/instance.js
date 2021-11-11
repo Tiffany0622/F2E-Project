@@ -11,6 +11,7 @@ import jsSHA from 'jssha'
  */
 const getAuthorizationHeader = function () {
   const AppData = {
+    // TDX 官網申請
     AppID: '4f7a1681eff2492a9e7f9654bd14bf71',
     AppKey: 'I3Hu7bqvVlqfOk8yVWphfWYVkGA',
   }

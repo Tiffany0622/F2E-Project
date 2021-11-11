@@ -1,8 +1,10 @@
 <template>
   <div>
-    <NuxtLink v-for="(item, index) in buttonList" :key="index">
+    <NuxtLink v-for="(item, index) in buttonList" :key="index" :to="item.path">
       <img :src="item.icon" alt="" />
-      {{ item.name }}
+      <span>
+        {{ item.name }}
+      </span>
     </NuxtLink>
   </div>
 </template>
@@ -19,3 +21,7 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

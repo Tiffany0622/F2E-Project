@@ -25,6 +25,7 @@ export default {
     // SCSS file in the project
     "@/assets/css/main.scss",
     "~/assets/css/main",
+    "@/assets/scss/index.scss",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -46,6 +47,9 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+
+    // 全域 sass 變數設定
+    "@nuxtjs/style-resources",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -68,6 +72,10 @@ export default {
         },
       },
     },
+  },
+
+  styleResources: {
+    sass: ["@/assets/variables.scss"],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

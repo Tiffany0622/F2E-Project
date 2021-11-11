@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="Navbar d-flex">
     <div>
       <img :src="logoImg" class="logoImg" />
     </div>
@@ -22,15 +22,18 @@ export default {
       buttonList: [
         {
           name: '台灣景點',
-          icon: '',
+          icon: require('~/static/icon/icon_attraction.png'),
+          path: '/Attraction',
         },
         {
           name: '美食住宿',
-          icon: '',
+          icon: require('~/static/icon/icon_food.png'),
+          path: '/Food',
         },
         {
           name: '景點交通',
-          icon: '',
+          icon: require('~/static/icon/icon_traffic.png'),
+          path: '/Traffic',
         },
       ],
     }
@@ -38,5 +41,10 @@ export default {
 }
 </script>
 
-<style lang="">
+<style lang="scss" scope>
+.Navbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
 </style>
